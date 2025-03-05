@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Management - Personal Finance Tracker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <div class="min-h-screen flex">
+        <!-- Sidebar -->
+        <aside class="bg-indigo-700 text-white w-64 space-y-6 py-7 px-2 absolute inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out">
+            <div class="flex items-center space-x-2 px-4">
+                <i class="fas fa-wallet text-2xl"></i>
+                <span class="text-2xl font-extrabold">FinTracker</span>
+            </div>
+            
+            <!-- Navigation Links -->
+            <nav class="space-y-2 px-4">
+                <a href="index.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-indigo-800 transition duration-200">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="income.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-indigo-800 transition duration-200">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <span>Income Tracking</span>
+                </a>
+                <a href="expenses.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-indigo-800 transition duration-200">
+                    <i class="fas fa-credit-card"></i>
+                    <span>Expense Tracking</span>
+                </a>
+                <a href="budget.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg bg-indigo-800">
+                    <i class="fas fa-chart-pie"></i>
+                    <span>Budget Management</span>
+                </a>
+                <a href="savings.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-indigo-800 transition duration-200">
+                    <i class="fas fa-piggy-bank"></i>
+                    <span>Savings & Goals</span>
+                </a>
+                <a href="reports.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-indigo-800 transition duration-200">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Reports & Analytics</span>
+                </a>
+                <a href="settings.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-indigo-800 transition duration-200">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </a>
+            </nav>
+
+            <!-- User Profile -->
+            <div class="border-t border-indigo-800 pt-4 mt-4 px-4">
+                <a href="profile.html" class="flex items-center space-x-3 px-4 py-3 hover:bg-indigo-800 rounded-lg transition duration-200">
+                    <div class="w-10 h-10 rounded-full bg-indigo-800 flex items-center justify-center">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div>
+                        <p class="text-sm font-semibold">John Doe</p>
+                        <p class="text-xs text-indigo-200">john@example.com</p>
+                    </div>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-8">
+            <!-- Page Header -->
+            <div class="flex justify-between items-center mb-8">
+                <div>
+                    <h1 class="text-2xl font-bold text-gray-800">Budget Management</h1>
+                    <p class="text-gray-600">Plan and manage your monthly budgets</p>
+                </div>
+                <div class="flex space-x-4">
+                    <button class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition duration-200">
+                        <i class="fas fa-plus mr-2"></i>Create Budget
+                    </button>
+                    <button class="bg-white text-gray-600 px-4 py-2 rounded-lg border border-gray-300 hover:bg-gray-50 transition duration-200">
+                        <i class="fas fa-calendar mr-2"></i>July 2023
+                    </button>
+                </div>
+            </div>
+
+            <!-- Budget Summary Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+                <div class="bg-white rounded-lg p-6 shadow-sm">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="bg-indigo-100 p-3 rounded-lg">
+                            <i class="fas fa-wallet text-indigo-600"></i>
+                        </div>
+                        <span class="text-sm text-gray-500">Total Budget</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800">$8,000.00</h3>
+                    <p class="text-indigo-600 text-sm"><i class="fas fa-calendar mr-1"></i>Monthly</p>
+                </div>
+
+                <div class="bg-white rounded-lg p-6 shadow-sm">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="bg-green-100 p-3 rounded-lg">
+                            <i class="fas fa-check-circle text-green-600"></i>
+                        </div>
+                        <span class="text-sm text-gray-500">Within Budget</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800">6</h3>
+                    <p class="text-green-600 text-sm"><i class="fas fa-chart-pie mr-1"></i>Categories</p>
+                </div>
+
+                <div class="bg-white rounded-lg p-6 shadow-sm">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="bg-red-100 p-3 rounded-lg">
+                            <i class="fas fa-exclamation-circle text-red-600"></i>
+                        </div>
+                        <span class="text-sm text-gray-500">Over Budget</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800">2</h3>
+                    <p class="text-red-600 text-sm"><i class="fas fa-chart-pie mr-1"></i>Categories</p>
+                </div>
+
+                <div class="bg-white rounded-lg p-6 shadow-sm">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="bg-yellow-100 p-3 rounded-lg">
+                            <i class="fas fa-percentage text-yellow-600"></i>
+                        </div>
+                        <span class="text-sm text-gray-500">Budget Used</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800">68.75%</h3>
+                    <p class="text-yellow-600 text-sm"><i class="fas fa-clock mr-1"></i>This Month</p>
+                </div>
+            </div>
+
+            <!-- Budget Categories -->
+            <div class="bg-white rounded-lg p-6 shadow-sm mb-8">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-xl font-bold text-gray-800">Budget Categories</h2>
+                    <div class="flex space-x-2">
+                        <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm">Within Budget</span>
+                        <span class="px-3 py-1 bg-yellow-100 text-yellow-600 rounded-full text-sm">Warning</span>
+                        <span class="px-3 py-1 bg-red-100 text-red-600 rounded-full text-sm">Over Budget</span>
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <!-- Housing -->
+                    <div class="p-4 bg-gray-50 rounded-lg">
+                        <div class="flex justify-between items-start mb-2">
+                            <div class="flex items-center space-x-3">
+                                <div class="bg-green-100 p-3 rounded-lg">
+                                    <i class="fas fa-home text-green-600"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-gray-800">Housing</h3>
+                                    <p class="text-sm text-gray-500">Rent, utilities, maintenance</p>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="font-semibold text-gray-800">$1,500 / $2,000</p>
+                                <p class="text-sm text-green-600">75% used</p>
+                            </div>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="bg-green-600 h-2.5 rounded-full" style="width: 75%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Food & Dining -->
+                    <div class="p-4 bg-gray-50 rounded-lg">
+                        <div class="flex justify-between items-start mb-2">
+                            <div class="flex items-center space-x-3">
+                                <div class="bg-red-100 p-3 rounded-lg">
+                                    <i class="fas fa-utensils text-red-600"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-gray-800">Food & Dining</h3>
+                                    <p class="text-sm text-gray-500">Groceries, restaurants, takeout</p>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="font-semibold text-gray-800">$750 / $600</p>
+                                <p class="text-sm text-red-600">125% used</p>
+                            </div>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="bg-red-600 h-2.5 rounded-full" style="width: 100%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Transportation -->
+                    <div class="p-4 bg-gray-50 rounded-lg">
+                        <div class="flex justify-between items-start mb-2">
+                            <div class="flex items-center space-x-3">
+                                <div class="bg-yellow-100 p-3 rounded-lg">
+                                    <i class="fas fa-car text-yellow-600"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-gray-800">Transportation</h3>
+                                    <p class="text-sm text-gray-500">Gas, parking, public transit</p>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="font-semibold text-gray-800">$280 / $300</p>
+                                <p class="text-sm text-yellow-600">93% used</p>
+                            </div>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="bg-yellow-600 h-2.5 rounded-full" style="width: 93%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Entertainment -->
+                    <div class="p-4 bg-gray-50 rounded-lg">
+                        <div class="flex justify-between items-start mb-2">
+                            <div class="flex items-center space-x-3">
+                                <div class="bg-green-100 p-3 rounded-lg">
+                                    <i class="fas fa-film text-green-600"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-gray-800">Entertainment</h3>
+                                    <p class="text-sm text-gray-500">Movies, events, hobbies</p>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="font-semibold text-gray-800">$150 / $200</p>
+                                <p class="text-sm text-green-600">75% used</p>
+                            </div>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="bg-green-600 h-2.5 rounded-full" style="width: 75%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Budget Tips -->
+            <div class="bg-indigo-50 rounded-lg p-6">
+                <div class="flex items-center space-x-3 mb-4">
+                    <div class="bg-indigo-100 p-3 rounded-lg">
+                        <i class="fas fa-lightbulb text-indigo-600"></i>
+                    </div>
+                    <h2 class="text-xl font-bold text-gray-800">Budget Tips</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white p-4 rounded-lg">
+                        <p class="text-gray-600"><i class="fas fa-check-circle text-green-600 mr-2"></i>Consider reducing dining out expenses to meet your Food & Dining budget.</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg">
+                        <p class="text-gray-600"><i class="fas fa-check-circle text-green-600 mr-2"></i>You're doing great with Housing expenses! Keep it up!</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg">
+                        <p class="text-gray-600"><i class="fas fa-exclamation-circle text-yellow-600 mr-2"></i>Transportation budget is close to limit. Plan your trips efficiently.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Add mobile menu toggle functionality
+        const menuBtn = document.querySelector('[data-menu-btn]');
+        const sidebar = document.querySelector('aside');
+        
+        if (menuBtn) {
+            menuBtn.addEventListener('click', () => {
+                sidebar.classList.toggle('-translate-x-full');
+            });
+        }
+    </script>
+</body>
+</html> 

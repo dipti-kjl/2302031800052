@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extended Reality Technologies - A4 Card</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .a4-card {
+            width: 210mm;
+            height: 297mm;
+            margin: 20px auto;
+            position: relative;
+            background-color: #ffffff;
+            border-radius: 0;
+            box-shadow: none;
+        }
+
+        .card-section {
+            background-color: #ffffff;
+            border: 2px solid #e5e7eb;
+            border-radius: 0;
+            position: relative;
+        }
+
+        .connecting-line {
+            position: absolute;
+            width: 2px;
+            background-color: #e5e7eb;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 0;
+        }
+
+        .tech-icon {
+            font-size: 2.5rem;
+            height: 4rem;
+            width: 4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0;
+        }
+
+        .stat-circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid;
+        }
+
+        .progress-bar {
+            height: 8px;
+            border-radius: 4px;
+            background-color: #e5e7eb;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 1s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen p-8 flex items-center justify-center">
+    <!-- A4 Card -->
+    <div class="a4-card p-6">
+        <!-- Header Section -->
+        <header class="text-center mb-6 relative z-10 bg-white">
+            <i class="fas fa-vr-cardboard text-4xl text-indigo-600 mb-3"></i>
+            <h1 class="text-3xl font-bold text-gray-800 mb-2">
+                Extended Reality
+            </h1>
+            <p class="text-gray-600 text-base">The Future of Digital Interaction</p>
+        </header>
+
+        <!-- Main Content -->
+        <div class="grid grid-cols-2 gap-4">
+            <!-- VR Section -->
+            <div class="card-section p-4 flex gap-4">
+                <div class="flex-1">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2 flex items-center">
+                        <i class="fas fa-vr-cardboard mr-2 text-indigo-600"></i>
+                        Virtual Reality
+                    </h3>
+                    <ul class="space-y-1 text-gray-600 text-sm">
+                        <li class="flex items-center"><i class="fas fa-check text-indigo-600 mr-2"></i>Immersive 3D worlds</li>
+                        <li class="flex items-center"><i class="fas fa-check text-indigo-600 mr-2"></i>360° experiences</li>
+                        <li class="flex items-center"><i class="fas fa-check text-indigo-600 mr-2"></i>Gaming revolution</li>
+                    </ul>
+                </div>
+                <div class="stat-circle border-indigo-600 text-indigo-600">
+                    <span class="text-lg font-bold">14.4M</span>
+                    <span class="text-xs">Users</span>
+                </div>
+            </div>
+
+            <!-- AR Section -->
+            <div class="card-section p-4 flex gap-4">
+                <div class="flex-1">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2 flex items-center">
+                        <i class="fas fa-glasses mr-2 text-emerald-600"></i>
+                        Augmented Reality
+                    </h3>
+                    <ul class="space-y-1 text-gray-600 text-sm">
+                        <li class="flex items-center"><i class="fas fa-check text-emerald-600 mr-2"></i>Real-world overlay</li>
+                        <li class="flex items-center"><i class="fas fa-check text-emerald-600 mr-2"></i>Interactive apps</li>
+                        <li class="flex items-center"><i class="fas fa-check text-emerald-600 mr-2"></i>Enhanced learning</li>
+                    </ul>
+                </div>
+                <div class="stat-circle border-emerald-600 text-emerald-600">
+                    <span class="text-lg font-bold">$97.7B</span>
+                    <span class="text-xs">Market</span>
+                </div>
+            </div>
+
+            <!-- Animation Section -->
+            <div class="card-section p-4 flex gap-4">
+                <div class="flex-1">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2 flex items-center">
+                        <i class="fas fa-film mr-2 text-purple-600"></i>
+                        Animation
+                    </h3>
+                    <ul class="space-y-1 text-gray-600 text-sm">
+                        <li class="flex items-center"><i class="fas fa-check text-purple-600 mr-2"></i>3D modeling</li>
+                        <li class="flex items-center"><i class="fas fa-check text-purple-600 mr-2"></i>Motion design</li>
+                        <li class="flex items-center"><i class="fas fa-check text-purple-600 mr-2"></i>Visual effects</li>
+                    </ul>
+                </div>
+                <div class="flex flex-col items-center justify-center">
+                    <div class="tech-icon bg-purple-100 text-purple-600 mb-2">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NFT Section -->
+            <div class="card-section p-4 flex gap-4">
+                <div class="flex-1">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2 flex items-center">
+                        <i class="fas fa-cube mr-2 text-amber-600"></i>
+                        NFTs
+                    </h3>
+                    <ul class="space-y-1 text-gray-600 text-sm">
+                        <li class="flex items-center"><i class="fas fa-check text-amber-600 mr-2"></i>Digital assets</li>
+                        <li class="flex items-center"><i class="fas fa-check text-amber-600 mr-2"></i>Blockchain art</li>
+                        <li class="flex items-center"><i class="fas fa-check text-amber-600 mr-2"></i>Unique tokens</li>
+                    </ul>
+                </div>
+                <div class="stat-circle border-amber-600 text-amber-600">
+                    <span class="text-lg font-bold">$2.5B</span>
+                    <span class="text-xs">Sales</span>
+                </div>
+            </div>
+
+            <!-- Metaverse Section -->
+            <div class="card-section p-4 flex gap-4 col-span-2">
+                <div class="flex-1">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2 flex items-center">
+                        <i class="fas fa-globe mr-2 text-blue-600"></i>
+                        Metaverse
+                    </h3>
+                    <ul class="space-y-1 text-gray-600 text-sm">
+                        <li class="flex items-center"><i class="fas fa-check text-blue-600 mr-2"></i>Virtual worlds</li>
+                        <li class="flex items-center"><i class="fas fa-check text-blue-600 mr-2"></i>Digital economy</li>
+                        <li class="flex items-center"><i class="fas fa-check text-blue-600 mr-2"></i>Social interaction</li>
+                    </ul>
+                </div>
+                <div class="stat-circle border-blue-600 text-blue-600">
+                    <span class="text-lg font-bold">$800B</span>
+                    <span class="text-xs">Market</span>
+                </div>
+            </div>
+
+            <!-- Additional Info Cards -->
+            <div class="col-span-2 grid grid-cols-3 gap-4 mt-4">
+                <div class="card-section p-3 text-center">
+                    <i class="fas fa-users text-2xl text-indigo-600 mb-2"></i>
+                    <h4 class="text-sm font-semibold text-gray-800">Growing Community</h4>
+                    <p class="text-xs text-gray-600">Millions of active users</p>
+                </div>
+                <div class="card-section p-3 text-center">
+                    <i class="fas fa-chart-line text-2xl text-emerald-600 mb-2"></i>
+                    <h4 class="text-sm font-semibold text-gray-800">Market Growth</h4>
+                    <p class="text-xs text-gray-600">Exponential adoption rate</p>
+                </div>
+                <div class="card-section p-3 text-center">
+                    <i class="fas fa-rocket text-2xl text-blue-600 mb-2"></i>
+                    <h4 class="text-sm font-semibold text-gray-800">Future Ready</h4>
+                    <p class="text-xs text-gray-600">Leading innovation</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- After Additional Info Cards, add new Analytics Section -->
+        <div class="mt-8 col-span-2">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Extended Reality Analytics</h3>
+            
+            <!-- Market Share Grid -->
+            <div class="grid grid-cols-2 gap-6 mb-6">
+                <!-- Growth Metrics -->
+                <div class="card-section p-4">
+                    <h4 class="text-sm font-semibold text-gray-800 mb-3">Industry Growth Rate</h4>
+                    <div class="space-y-3">
+                        <div>
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="text-gray-600">Virtual Reality</span>
+                                <span class="text-indigo-600 font-semibold">48.7%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill bg-indigo-600" style="width: 48.7%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="text-gray-600">Augmented Reality</span>
+                                <span class="text-emerald-600 font-semibold">38.1%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill bg-emerald-600" style="width: 38.1%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="text-gray-600">NFT Market</span>
+                                <span class="text-amber-600 font-semibold">42.5%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill bg-amber-600" style="width: 42.5%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Key Statistics -->
+                <div class="card-section p-4">
+                    <h4 class="text-sm font-semibold text-gray-800 mb-3">Key Statistics</h4>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="border-r border-gray-200 pr-3">
+                            <div class="text-3xl font-bold text-indigo-600">75%</div>
+                            <div class="text-xs text-gray-600">Companies investing in XR</div>
+                        </div>
+                        <div class="pl-3">
+                            <div class="text-3xl font-bold text-emerald-600">2.4B</div>
+                            <div class="text-xs text-gray-600">Mobile AR Users by 2024</div>
+                        </div>
+                        <div class="border-r border-gray-200 pr-3">
+                            <div class="text-3xl font-bold text-amber-600">92%</div>
+                            <div class="text-xs text-gray-600">Healthcare XR Adoption</div>
+                        </div>
+                        <div class="pl-3">
+                            <div class="text-3xl font-bold text-blue-600">63%</div>
+                            <div class="text-xs text-gray-600">Education Sector Growth</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Industry Applications -->
+            <!-- <div class="grid grid-cols-4 gap-4">
+                <div class="card-section p-3">
+                    <div class="flex items-center mb-2">
+                        <i class="fas fa-hospital text-lg text-indigo-600 mr-2"></i>
+                        <h4 class="text-sm font-semibold text-gray-800">Healthcare</h4>
+                    </div>
+                    <p class="text-xs text-gray-600">Surgical training & patient care</p>
+                </div>
+                <div class="card-section p-3">
+                    <div class="flex items-center mb-2">
+                        <i class="fas fa-graduation-cap text-lg text-emerald-600 mr-2"></i>
+                        <h4 class="text-sm font-semibold text-gray-800">Education</h4>
+                    </div>
+                    <p class="text-xs text-gray-600">Interactive learning experiences</p>
+                </div>
+                <div class="card-section p-3">
+                    <div class="flex items-center mb-2">
+                        <i class="fas fa-shopping-bag text-lg text-amber-600 mr-2"></i>
+                        <h4 class="text-sm font-semibold text-gray-800">Retail</h4>
+                    </div>
+                    <p class="text-xs text-gray-600">Virtual try-ons & showrooms</p>
+                </div>
+                <div class="card-section p-3">
+                    <div class="flex items-center mb-2">
+                        <i class="fas fa-gamepad text-lg text-blue-600 mr-2"></i>
+                        <h4 class="text-sm font-semibold text-gray-800">Gaming</h4>
+                    </div>
+                    <p class="text-xs text-gray-600">Immersive gaming experiences</p>
+                </div>
+            </div>
+        </div> -->
+    </div>
+</body>
+</html> 

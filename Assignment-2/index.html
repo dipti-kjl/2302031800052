@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Tracker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <div class="min-h-screen flex">
+        <!-- Sidebar -->
+        <aside class="bg-indigo-700 text-white w-64 space-y-6 py-7 px-2 absolute inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out">
+            <div class="flex items-center space-x-2 px-4">
+                <i class="fas fa-wallet text-2xl"></i>
+                <span class="text-2xl font-extrabold">FinTracker</span>
+            </div>
+            
+            <!-- Navigation Links -->
+            <nav class="space-y-2 px-4">
+                <a href="index.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg bg-indigo-800">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="income.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-indigo-800 transition duration-200">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <span>Income Tracking</span>
+                </a>
+                <a href="expenses.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-indigo-800 transition duration-200">
+                    <i class="fas fa-credit-card"></i>
+                    <span>Expense Tracking</span>
+                </a>
+                <a href="budget.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-indigo-800 transition duration-200">
+                    <i class="fas fa-chart-pie"></i>
+                    <span>Budget Management</span>
+                </a>
+                <a href="savings.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-indigo-800 transition duration-200">
+                    <i class="fas fa-piggy-bank"></i>
+                    <span>Savings & Goals</span>
+                </a>
+                <a href="reports.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-indigo-800 transition duration-200">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Reports & Analytics</span>
+                </a>
+                <a href="settings.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-indigo-800 transition duration-200">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </a>
+            </nav>
+
+            <!-- User Profile -->
+            <div class="border-t border-indigo-800 pt-4 mt-4 px-4">
+                <a href="profile.html" class="flex items-center space-x-3 px-4 py-3 hover:bg-indigo-800 rounded-lg transition duration-200">
+                    <div class="w-10 h-10 rounded-full bg-indigo-800 flex items-center justify-center">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div>
+                        <p class="text-sm font-semibold">John Doe</p>
+                        <p class="text-xs text-indigo-200">john@example.com</p>
+                    </div>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-8">
+            <!-- Dashboard Header -->
+            <div class="flex justify-between items-center mb-8">
+                <div>
+                    <h1 class="text-2xl font-bold text-gray-800">Dashboard</h1>
+                    <p class="text-gray-600">Welcome back, John!</p>
+                </div>
+                <div class="flex space-x-4">
+                    <button class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition duration-200">
+                        <i class="fas fa-plus mr-2"></i>Add Transaction
+                    </button>
+                    <button class="bg-white text-gray-600 px-4 py-2 rounded-lg border border-gray-300 hover:bg-gray-50 transition duration-200">
+                        <i class="fas fa-download mr-2"></i>Export
+                    </button>
+                </div>
+            </div>
+
+            <!-- Stats Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                <div class="bg-white rounded-lg p-6 shadow-sm">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="bg-green-100 p-3 rounded-lg">
+                            <i class="fas fa-wallet text-green-600"></i>
+                        </div>
+                        <span class="text-sm text-gray-500">Total Balance</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800">$24,500.00</h3>
+                    <p class="text-green-600 text-sm"><i class="fas fa-arrow-up mr-1"></i>+2.5% from last month</p>
+                </div>
+
+                <div class="bg-white rounded-lg p-6 shadow-sm">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="bg-blue-100 p-3 rounded-lg">
+                            <i class="fas fa-money-bill-wave text-blue-600"></i>
+                        </div>
+                        <span class="text-sm text-gray-500">Monthly Income</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800">$8,000.00</h3>
+                    <p class="text-blue-600 text-sm"><i class="fas fa-arrow-up mr-1"></i>Regular salary</p>
+                </div>
+
+                <div class="bg-white rounded-lg p-6 shadow-sm">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="bg-red-100 p-3 rounded-lg">
+                            <i class="fas fa-credit-card text-red-600"></i>
+                        </div>
+                        <span class="text-sm text-gray-500">Monthly Expenses</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800">$5,500.00</h3>
+                    <p class="text-red-600 text-sm"><i class="fas fa-arrow-down mr-1"></i>-12% from last month</p>
+                </div>
+
+                <div class="bg-white rounded-lg p-6 shadow-sm">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="bg-purple-100 p-3 rounded-lg">
+                            <i class="fas fa-piggy-bank text-purple-600"></i>
+                        </div>
+                        <span class="text-sm text-gray-500">Savings</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800">$2,500.00</h3>
+                    <p class="text-purple-600 text-sm"><i class="fas fa-arrow-up mr-1"></i>On track</p>
+                </div>
+            </div>
+
+            <!-- Recent Transactions & Budget Overview -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Recent Transactions -->
+                <div class="bg-white rounded-lg p-6 shadow-sm">
+                    <div class="flex justify-between items-center mb-6">
+                        <h2 class="text-xl font-bold text-gray-800">Recent Transactions</h2>
+                        <a href="#" class="text-indigo-600 text-sm hover:text-indigo-700">View All</a>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                            <div class="flex items-center space-x-3">
+                                <div class="bg-blue-100 p-3 rounded-lg">
+                                    <i class="fas fa-shopping-cart text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-gray-800">Grocery Shopping</p>
+                                    <p class="text-sm text-gray-500">Today, 2:30 PM</p>
+                                </div>
+                            </div>
+                            <span class="text-red-600 font-semibold">-$120.50</span>
+                        </div>
+
+                        <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                            <div class="flex items-center space-x-3">
+                                <div class="bg-green-100 p-3 rounded-lg">
+                                    <i class="fas fa-money-bill text-green-600"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-gray-800">Salary Deposit</p>
+                                    <p class="text-sm text-gray-500">Yesterday</p>
+                                </div>
+                            </div>
+                            <span class="text-green-600 font-semibold">+$4,000.00</span>
+                        </div>
+
+                        <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                            <div class="flex items-center space-x-3">
+                                <div class="bg-red-100 p-3 rounded-lg">
+                                    <i class="fas fa-home text-red-600"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-gray-800">Rent Payment</p>
+                                    <p class="text-sm text-gray-500">Jul 1, 2023</p>
+                                </div>
+                            </div>
+                            <span class="text-red-600 font-semibold">-$1,500.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Budget Overview -->
+                <div class="bg-white rounded-lg p-6 shadow-sm">
+                    <div class="flex justify-between items-center mb-6">
+                        <h2 class="text-xl font-bold text-gray-800">Budget Overview</h2>
+                        <a href="budget.html" class="text-indigo-600 text-sm hover:text-indigo-700">Manage Budgets</a>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-sm font-medium text-gray-600">Housing</span>
+                                <span class="text-sm font-medium text-gray-600">$1,500 / $2,000</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-indigo-600 h-2.5 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-sm font-medium text-gray-600">Food & Dining</span>
+                                <span class="text-sm font-medium text-gray-600">$450 / $600</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-indigo-600 h-2.5 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-sm font-medium text-gray-600">Transportation</span>
+                                <span class="text-sm font-medium text-gray-600">$200 / $300</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-indigo-600 h-2.5 rounded-full" style="width: 66%"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-sm font-medium text-gray-600">Entertainment</span>
+                                <span class="text-sm font-medium text-gray-600">$150 / $200</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-indigo-600 h-2.5 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Add mobile menu toggle functionality
+        const menuBtn = document.querySelector('[data-menu-btn]');
+        const sidebar = document.querySelector('aside');
+        
+        if (menuBtn) {
+            menuBtn.addEventListener('click', () => {
+                sidebar.classList.toggle('-translate-x-full');
+            });
+        }
+    </script>
+</body>
+</html> 
